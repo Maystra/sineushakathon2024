@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6a6qlfme22qs"]
+
+[ext_resource type="PackedScene" uid="uid://clagc50up0wfr" path="res://scenes/brick.tscn" id="1_clfug"]
+
+[node name="Level1Layout" type="Node3D"]
+
+[node name="Brick" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.256198, 0)
+
+[node name="Brick18" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.189792, 0)
+bonus = 2
+
+[node name="Brick2" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.170991, 0.256198, 0)
+
+[node name="Brick3" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.173301, 0.256198, 0)
+
+[node name="Brick4" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.318408, 0)
+
+[node name="Brick5" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.170991, 0.318408, 0)
+
+[node name="Brick8" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.342354, 0.318408, 0)
+
+[node name="Brick6" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.173301, 0.318408, 0)
+
+[node name="Brick7" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.348295, 0.318408, 0)
+
+[node name="Brick9" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.387634, 0)
+
+[node name="Brick10" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.170991, 0.387634, 0)
+
+[node name="Brick11" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.342354, 0.387634, 0)
+
+[node name="Brick12" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.173301, 0.387634, 0)
+
+[node name="Brick14" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.455365, 0)
+
+[node name="Brick17" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.520553, 0)
+
+[node name="Brick15" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.170991, 0.455365, 0)
+
+[node name="Brick16" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.173301, 0.455365, 0)
+
+[node name="Brick13" parent="." instance=ExtResource("1_clfug")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.348295, 0.387634, 0)

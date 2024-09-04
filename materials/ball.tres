@@ -1,0 +1,18 @@
+[gd_resource type="ORMMaterial3D" load_steps=4 format=3 uid="uid://cgwodrr3sc7x8"]
+
+[ext_resource type="Texture2D" uid="uid://lhk0lq623bln" path="res://textures/ball2/ball_albedo.jpg" id="1_ss1h0"]
+[ext_resource type="Texture2D" uid="uid://cumn50nst4he" path="res://textures/ball2/ball_normal.jpg" id="2_nadnr"]
+[ext_resource type="Texture2D" uid="uid://ctehwaldqio5w" path="res://textures/ball2/ball_mixmap.jpg" id="3_aemeq"]
+
+[resource]
+albedo_texture = ExtResource("1_ss1h0")
+albedo_texture_msdf = true
+orm_texture = ExtResource("3_aemeq")
+emission = Color(1, 0.483333, 0, 1)
+emission_energy_multiplier = 2.0
+normal_enabled = true
+normal_texture = ExtResource("2_nadnr")
+anisotropy = 1.0
+ao_light_affect = 1.0
+backlight = Color(1, 1, 1, 1)
+refraction_scale = 1.0

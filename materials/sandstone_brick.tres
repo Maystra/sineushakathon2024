@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://d1ixlrfvsymbv"]
+
+[ext_resource type="Texture2D" uid="uid://b05l3pvv0tek3" path="res://textures/bricks/sandstone_brick/seaworn_sandstone_brick_diff_2k.jpg" id="1_jjd3v"]
+[ext_resource type="Texture2D" uid="uid://7jncybp5qj1w" path="res://textures/bricks/sandstone_brick/seaworn_sandstone_brick_ao_2k.jpg" id="2_55e6e"]
+[ext_resource type="Texture2D" uid="uid://dm650hvhoqs1g" path="res://textures/bricks/sandstone_brick/seaworn_sandstone_brick_nor_gl_2k.jpg" id="3_n1l5w"]
+[ext_resource type="Texture2D" uid="uid://blwhlysvet052" path="res://textures/bricks/sandstone_brick/seaworn_sandstone_brick_rough_2k.jpg" id="4_ihccn"]
+
+[resource]
+albedo_texture = ExtResource("1_jjd3v")
+metallic_specular = 0.0
+roughness_texture = ExtResource("4_ihccn")
+normal_enabled = true
+normal_scale = 4.0
+normal_texture = ExtResource("3_n1l5w")
+ao_enabled = true
+ao_texture = ExtResource("2_55e6e")
+uv1_scale = Vector3(2, 2, 2)

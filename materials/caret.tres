@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://7d55gjuu0hb8"]
+
+[ext_resource type="Texture2D" uid="uid://dauujpsvf3fbq" path="res://textures/caret/metal_plate_diff_1k.jpg" id="1_q58nl"]
+[ext_resource type="Texture2D" uid="uid://b0cicxac7rr6y" path="res://textures/caret/metal_plate_ao_1k.jpg" id="2_0jwti"]
+[ext_resource type="Texture2D" uid="uid://b3btrm6gbqbe6" path="res://textures/caret/metal_plate_metal_1k.jpg" id="2_42vxn"]
+[ext_resource type="Texture2D" uid="uid://b2fx1aj0a0iit" path="res://textures/caret/metal_plate_rough_1k.jpg" id="3_fn8y0"]
+[ext_resource type="Texture2D" uid="uid://wgggf15krfx8" path="res://textures/caret/metal_plate_nor_gl_1k.jpg" id="3_royyp"]
+
+[resource]
+albedo_color = Color(0.843184, 0.843184, 0.843184, 1)
+albedo_texture = ExtResource("1_q58nl")
+metallic = 1.0
+metallic_specular = 0.59
+metallic_texture = ExtResource("2_42vxn")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("3_fn8y0")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = 2.0
+normal_texture = ExtResource("3_royyp")
+ao_enabled = true
+ao_texture = ExtResource("2_0jwti")
+uv1_scale = Vector3(2, 2, 2)

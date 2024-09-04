@@ -1,0 +1,102 @@
+[gd_scene load_steps=3 format=3 uid="uid://1ueg50713a2p"]
+
+[ext_resource type="Script" path="res://scripts/interfaces/settings.gd" id="1_s71j4"]
+[ext_resource type="Theme" uid="uid://qb0nbamu6l7a" path="res://scenes/interfaces/custom_theme.tres" id="2_h6h1j"]
+
+[node name="Settings" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s71j4")
+
+[node name="Items" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -95.0
+offset_right = 350.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="VolumeLabel" type="Label" parent="Items"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Громкость"
+vertical_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="Items"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -80.0
+max_value = 15.0
+rounded = true
+
+[node name="DifficultyLabel" type="Label" parent="Items"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Сложность"
+vertical_alignment = 1
+
+[node name="DifficultySelector" type="OptionButton" parent="Items"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Легко"
+popup/item_1/text = "Средне"
+popup/item_1/id = 1
+popup/item_2/text = "Сложно"
+popup/item_2/id = 2
+
+[node name="CameraShakeLabel" type="Label" parent="Items"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Тряска камеры"
+vertical_alignment = 1
+
+[node name="CameraShakeSelector" type="OptionButton" parent="Items"]
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Включено"
+popup/item_1/text = "Выключено"
+popup/item_1/id = 1
+
+[node name="Menu" type="Button" parent="."]
+custom_minimum_size = Vector2(450, 75)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -130.0
+offset_right = 225.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme = ExtResource("2_h6h1j")
+theme_override_font_sizes/font_size = 36
+text = "В меню"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="value_changed" from="Items/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="item_selected" from="Items/DifficultySelector" to="." method="_on_difficulty_selector_item_selected"]
+[connection signal="pressed" from="Items/DifficultySelector" to="." method="_on_difficulty_selector_pressed"]
+[connection signal="item_selected" from="Items/CameraShakeSelector" to="." method="_on_camera_shake_selector_item_selected"]

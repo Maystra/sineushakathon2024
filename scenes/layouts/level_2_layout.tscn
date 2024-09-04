@@ -1,0 +1,176 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfcpsfjfteumn"]
+
+[ext_resource type="PackedScene" uid="uid://clagc50up0wfr" path="res://scenes/brick.tscn" id="1_jvxm8"]
+
+[node name="Level2Layout" type="Node3D"]
+
+[node name="Brick18" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.345303, 0)
+type = 1
+
+[node name="Brick20" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.17, 0.345511, 0)
+type = 1
+
+[node name="Brick21" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.34, 0.345511, 0)
+type = 1
+
+[node name="Brick27" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.34, 0.405511, 0)
+type = 1
+
+[node name="Brick28" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.34, 0.465511, 0)
+type = 1
+
+[node name="Brick29" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.34, 0.525511, 0)
+type = 1
+
+[node name="Brick30" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.34, 0.585511, 0)
+type = 1
+
+[node name="Brick19" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.17, 0.345511, 0)
+type = 1
+
+[node name="Brick22" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.34, 0.345511, 0)
+type = 1
+
+[node name="Brick43" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.285, 0)
+type = 1
+
+[node name="Brick44" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.17, 0.285, 0)
+type = 1
+
+[node name="Brick45" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.34, 0.285, 0)
+type = 1
+
+[node name="Brick48" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.514507, 0.345511, 0)
+type = 1
+
+[node name="Brick49" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.514507, 0.405511, 0)
+type = 1
+
+[node name="Brick50" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.514507, 0.465511, 0)
+type = 1
+
+[node name="Brick51" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.514507, 0.525511, 0)
+type = 1
+
+[node name="Brick52" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.514507, 0.585511, 0)
+type = 1
+
+[node name="Brick53" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.514507, 0.285, 0)
+type = 1
+
+[node name="Brick46" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.17, 0.285, 0)
+type = 1
+
+[node name="Brick47" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.34, 0.285, 0)
+type = 1
+
+[node name="Brick23" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.34, 0.405511, 0)
+type = 1
+
+[node name="Brick24" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.34, 0.465511, 0)
+type = 1
+
+[node name="Brick25" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.34, 0.525511, 0)
+type = 1
+
+[node name="Brick32" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.17, 0.405511, 0)
+type = 1
+
+[node name="Brick35" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.17, 0.465511, 0)
+type = 1
+
+[node name="Brick36" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.17, 0.525511, 0)
+type = 1
+
+[node name="Brick37" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.405511, 0)
+type = 1
+
+[node name="Brick38" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.465511, 0)
+type = 1
+
+[node name="Brick39" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.525511, 0)
+type = 1
+
+[node name="Brick40" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.17, 0.405511, 0)
+type = 1
+
+[node name="Brick41" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.17, 0.465511, 0)
+type = 1
+
+[node name="Brick42" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.17, 0.525511, 0)
+type = 1
+
+[node name="Brick26" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.34, 0.585511, 0)
+type = 1
+
+[node name="Brick54" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.516426, 0.345511, 0)
+type = 1
+
+[node name="Brick55" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.516426, 0.285, 0)
+type = 1
+
+[node name="Brick56" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.516426, 0.405511, 0)
+type = 1
+
+[node name="Brick57" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.516426, 0.465511, 0)
+type = 1
+
+[node name="Brick58" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.516426, 0.525511, 0)
+type = 1
+
+[node name="Brick59" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.516426, 0.585511, 0)
+type = 1
+
+[node name="Brick31" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -0.17, 0.585511, 0)
+type = 1
+bonus = 3
+
+[node name="Brick33" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0.585511, 0)
+type = 1
+bonus = 3
+
+[node name="Brick34" parent="." instance=ExtResource("1_jvxm8")]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0.17, 0.585511, 0)
+type = 1
+bonus = 3

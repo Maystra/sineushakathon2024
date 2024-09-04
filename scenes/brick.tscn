@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=4 uid="uid://clagc50up0wfr"]
+
+[ext_resource type="Script" path="res://scripts/brick.gd" id="1_v7n0v"]
+[ext_resource type="Material" uid="uid://jph2vuo2x5mg" path="res://materials/brick1.tres" id="2_6qack"]
+[ext_resource type="Texture2D" uid="uid://dx3fbv68c1yu2" path="res://textures/decals/speed_icon.png" id="3_nwcba"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y00i8"]
+resource_name = "Material"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eq1aw"]
+_surfaces = [{
+"aabb": AABB(-0.000251704, -0.001, -0.000330475, 0.000503408, 0.002, 0.000660951),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAAADAAQABAAFAAAAAQAAAAUABQAGAAEABAAHAAYABgAFAAQAAwACAAcABwAEAAMAAgABAAYABgAHAAIA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("JPeDuW4Sg7qzQ605JPeDuW4SgzqzQ605JPeDOW4SgzqzQ605JPeDOW4Sg7qzQ605JPeDOW4Sg7qfQ625JPeDuW4Sg7qfQ625JPeDuW4SgzqfQ625JPeDOW4SgzqfQ625")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xgwcr"]
+resource_name = "Cube"
+_surfaces = [{
+"aabb": AABB(-0.000251704, -0.001, -0.000330475, 0.000503408, 0.002, 0.000660951),
+"attribute_data": PackedByteArray("ILAvO6aJET9FGUE/pokRP0UZQT/790E/ILAvO/v3QT9FGUE/SpaFPkUZQT+A5pI92FeAP4Dmkj3YV4A/SpaFPqCwLzuA5pI9RRlBP4Dmkj1FGUE/eOajPuCvLzt05qM+ILAvO/z3QT9FGUE//PdBP0UZQT9RZnI/ILAvO1Bmcj9gsC87duajPkUZQT945qM+RRlBP6aJET8gry87pokRP0UZQT/0cuY+RRlBP0qWhT7YV4A/SpaFPthXgD/0cuY+"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_y00i8"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("JPeDuW4Sg7qzQ605JPeDuW4SgzqzQ605JPeDOW4SgzqzQ605JPeDOW4Sg7qzQ605JPeDuW4Sg7qzQ605JPeDOW4Sg7qzQ605JPeDOW4Sg7qfQ625JPeDuW4Sg7qfQ625JPeDuW4SgzqzQ605JPeDuW4Sg7qzQ605JPeDuW4Sg7qfQ625JPeDuW4SgzqfQ625JPeDOW4Sg7qfQ625JPeDOW4SgzqfQ625JPeDuW4SgzqfQ625JPeDuW4Sg7qfQ625JPeDOW4Sg7qzQ605JPeDOW4SgzqzQ605JPeDOW4SgzqfQ625JPeDOW4Sg7qfQ625JPeDOW4SgzqzQ605JPeDuW4SgzqzQ605JPeDuW4SgzqfQ625JPeDOW4SgzqfQ625/3//f/9/////f/9//3////9//3//f////3//f/9/////fwAA//////9/AAD//////38AAP//////fwAA/////wAA/3//fwCAAAD/f/9/AIAAAP9//38AgAAA/3//fwCA//////9//////////3//////////f/////////9///////9//3///////3//f///////f/9///////9//3////9//////////3//////////f/////////9/////////")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_eq1aw")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ygbh7"]
+data = PackedVector3Array(-0.0003, -0.001, 0.0003, -0.0003, 0.001, 0.0003, 0.0003, 0.001, 0.0003, 0.0003, 0.001, 0.0003, 0.0003, -0.001, 0.0003, -0.0003, -0.001, 0.0003, -0.0003, -0.001, 0.0003, 0.0003, -0.001, 0.0003, 0.0003, -0.001, -0.0003, 0.0003, -0.001, -0.0003, -0.0003, -0.001, -0.0003, -0.0003, -0.001, 0.0003, -0.0003, 0.001, 0.0003, -0.0003, -0.001, 0.0003, -0.0003, -0.001, -0.0003, -0.0003, -0.001, -0.0003, -0.0003, 0.001, -0.0003, -0.0003, 0.001, 0.0003, 0.0003, -0.001, -0.0003, 0.0003, 0.001, -0.0003, -0.0003, 0.001, -0.0003, -0.0003, 0.001, -0.0003, -0.0003, -0.001, -0.0003, 0.0003, -0.001, -0.0003, 0.0003, -0.001, 0.0003, 0.0003, 0.001, 0.0003, 0.0003, 0.001, -0.0003, 0.0003, 0.001, -0.0003, 0.0003, -0.001, -0.0003, 0.0003, -0.001, 0.0003, 0.0003, 0.001, 0.0003, -0.0003, 0.001, 0.0003, -0.0003, 0.001, -0.0003, -0.0003, 0.001, -0.0003, 0.0003, 0.001, -0.0003, 0.0003, 0.001, 0.0003)
+
+[node name="Brick" type="StaticBody3D" groups=["Brick"]]
+transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, 0, 0)
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_v7n0v")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_xgwcr")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_6qack")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_ygbh7")
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(-8.74228e-08, -1, -2.66454e-14, 3.06422e-13, 1.77636e-14, -1, 1, -8.74228e-08, 1.77636e-14, -0.0106813, -0.000300099, -0.00095691)
+visible = false
+size = Vector3(0.0638843, 0.1, 0.0684082)
+texture_albedo = ExtResource("3_nwcba")
+albedo_mix = 0.6

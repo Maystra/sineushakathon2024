@@ -1,0 +1,142 @@
+[gd_scene load_steps=16 format=3 uid="uid://bo743ys5ilkb8"]
+
+[ext_resource type="Material" uid="uid://t13inm26ylmy" path="res://materials/platform.tres" id="1_hj7f0"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_io806"]
+[ext_resource type="Script" path="res://scripts/camera_3d.gd" id="2_xc4te"]
+[ext_resource type="PackedScene" uid="uid://ddjkrykdwjnqs" path="res://scenes/wall_1.tscn" id="3_byjxe"]
+[ext_resource type="PackedScene" uid="uid://c3gj86ukfvdil" path="res://scenes/caret.tscn" id="3_woi1g"]
+[ext_resource type="PackedScene" uid="uid://v6v1d0gd1u6n" path="res://scenes/ball.tscn" id="5_d26eq"]
+[ext_resource type="Script" path="res://scripts/death_zone.gd" id="7_vjoat"]
+[ext_resource type="Texture2D" uid="uid://p845xq58i2qq" path="res://textures/interface/tutorial_launch.png" id="9_ihgtj"]
+[ext_resource type="Texture2D" uid="uid://d63ordtygl8m" path="res://textures/interface/tutorial_move.png" id="10_7mbpd"]
+[ext_resource type="AudioStream" uid="uid://8vxhh41y0pgu" path="res://sounds/ambience.wav" id="12_wf6ya"]
+[ext_resource type="Script" path="res://scripts/blinking_light.gd" id="13_thrr4"]
+[ext_resource type="AudioStream" uid="uid://c63w8ljglatrl" path="res://sounds/drone2.wav" id="13_ysljm"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kte2l"]
+size = Vector2(10, 10)
+
+[sub_resource type="Environment" id="Environment_wpfjp"]
+background_mode = 2
+background_energy_multiplier = 0.2
+ambient_light_source = 3
+ambient_light_sky_contribution = 0.1
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_exposure = 0.7
+ssr_enabled = true
+ssao_enabled = true
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hw1ny"]
+size = Vector3(57.616, 0.05, 88.4245)
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_io806")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.296127, 0.716815)
+current = true
+fov = 70.0
+script = ExtResource("2_xc4te")
+
+[node name="CurrentLayout" type="Node3D" parent="."]
+
+[node name="Caret" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("3_woi1g")]
+ball = NodePath("../Ball")
+
+[node name="Background" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.120487)
+mesh = SubResource("PlaneMesh_kte2l")
+surface_material_override/0 = ExtResource("1_hj7f0")
+
+[node name="Ball" parent="." instance=ExtResource("5_d26eq")]
+floor_constant_speed = true
+platform_on_leave = 2
+
+[node name="wall_right" parent="." instance=ExtResource("3_byjxe")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.952469, 0, -0.0425998)
+
+[node name="wall_left" parent="." instance=ExtResource("3_byjxe")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.952, 0, -0.043)
+
+[node name="ceiling" parent="." instance=ExtResource("3_byjxe")]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0.900685, 0.876923, -0.0425998)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.993248, 0.116012, 0, -0.116012, 0.993248, 0, 0.793845, 2.19636)
+light_color = Color(1, 0.944, 0.79, 1)
+light_energy = 3.0
+light_specular = 0.4
+shadow_enabled = true
+spot_angle = 25.0
+spot_angle_attenuation = 1.31951
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wpfjp")
+
+[node name="DeathZone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.310991, 0)
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("7_vjoat")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8964, -0.0847778, 9.61114)
+shape = SubResource("BoxShape3D_hw1ny")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="DeathZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29236, -0.885632)
+shape = SubResource("BoxShape3D_hw1ny")
+
+[node name="LaunchTutorial" type="Decal" parent="."]
+transform = Transform3D(0.993793, -1.32656e-09, 0.111243, 0.111243, 1.18509e-08, -0.993793, 0, 1, 1.19249e-08, -0.58766, 0.606269, -0.117945)
+size = Vector3(0.525391, 0.1, 0.162305)
+texture_albedo = ExtResource("9_ihgtj")
+modulate = Color(0.741238, 0.739742, 0.712839, 1)
+albedo_mix = 0.6
+
+[node name="MoveTutorial" type="Decal" parent="."]
+transform = Transform3D(0.993963, 1.30836e-09, -0.109717, -0.109717, 1.18529e-08, -0.993963, 0, 1, 1.19249e-08, 0.569412, 0.624266, -0.0992806)
+size = Vector3(0.525391, 0.1, 0.162305)
+texture_albedo = ExtResource("10_7mbpd")
+modulate = Color(0.836667, 0.840341, 0.834867, 1)
+albedo_mix = 0.6
+
+[node name="MetalSounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_wf6ya")
+volume_db = -16.0
+autoplay = true
+
+[node name="Drone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ysljm")
+volume_db = -25.0
+autoplay = true
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(0.998963, 1.9905e-09, -0.0455373, 0.0455373, -4.3666e-08, 0.998963, 0, -1, -4.37114e-08, -0.577841, 0.832609, -0.100329)
+light_color = Color(1, 0.97, 0.9, 1)
+light_energy = 0.5
+shadow_enabled = true
+spot_range = 0.529133
+spot_attenuation = 1.25
+spot_angle = 78.75
+script = ExtResource("13_thrr4")
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(0.993112, -5.12181e-09, 0.117173, -0.117173, -4.34103e-08, 0.993112, 2.39462e-16, -1, -4.37114e-08, 0.586235, 0.832609, -0.100329)
+light_color = Color(1, 0.956, 0.78, 1)
+light_energy = 0.5
+shadow_enabled = true
+spot_range = 0.529133
+spot_attenuation = 1.25
+spot_angle = 78.75
+script = ExtResource("13_thrr4")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.656012, 0)
+light_color = Color(1, 0, 0, 1)
+light_energy = 0.25
+omni_range = 1.25
+
+[connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]

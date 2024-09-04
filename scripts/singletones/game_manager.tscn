@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdi1uwp2h6d2p"]
+
+[ext_resource type="Script" path="res://scripts/singletones/game_manager.gd" id="1_0wldn"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_0wldn")
+
+[connection signal="ball_died" from="." to="." method="_on_ball_died"]
+[connection signal="game_completed" from="." to="." method="_on_game_completed"]
+[connection signal="level_finished" from="." to="." method="_on_level_finished"]
