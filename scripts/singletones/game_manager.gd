@@ -40,6 +40,7 @@ func reset():
 	game_started = true
 	caret.reset()
 	ball.reset_bonus()
+	ui.reset_lives()
 	ball.launched = false
 	level_node.reset_layout()
 	level_node.start_tutorial()

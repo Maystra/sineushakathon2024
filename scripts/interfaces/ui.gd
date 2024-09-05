@@ -80,7 +80,6 @@ func _on_life_lost() -> void:
 func _on_try_again_pressed() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$LoseScreen/AnimationPlayer.play("hide")
-	reset_lives()
 	GameManager.reset()
 
 

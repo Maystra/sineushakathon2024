@@ -1,6 +1,10 @@
 extends CharacterBody3D
 
-const MOVE_SPEED = 110
+const MOVE_SPEED = 125
+const ACCELERATION_SPEED = 10
+const DECELERATION_SPEED = 5
+
+var speed := 0.0
 
 @export var ball : CharacterBody3D
 
@@ -33,14 +37,18 @@ func _input(event: InputEvent) -> void:
 		move_vector.x = 0
 
 func _physics_process(delta: float) -> void:
-	velocity = lerp(velocity, move_vector * MOVE_SPEED * delta, min(14*delta, 1.0))
+	if move_vector != Vector3.ZERO:
+		speed = min(speed + ACCELERATION_SPEED, MOVE_SPEED)
+	else:
+		speed = max(speed - DECELERATION_SPEED, 0)
+	velocity = lerp(velocity, move_vector * speed * delta, min(20*delta, 1.0))
 	match Settings.difficulty:
 		Settings.Difficulties.EASY:
 			scale.x = 1.5
 		Settings.Difficulties.MEDIUM:
 			scale.x = 1.0
 		Settings.Difficulties.HARD:
-			scale.x = 0.7
+			scale.x = 1.0
 
 func _process(delta: float) -> void:
 	var collision_result = move_and_slide()

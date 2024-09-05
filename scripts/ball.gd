@@ -44,11 +44,11 @@ func _process(delta: float) -> void:
 		MOVE_SPEED = 1
 	match Settings.difficulty:
 		Settings.Difficulties.EASY:
-			MOVE_SPEED = MOVE_SPEED*0.8
+			MOVE_SPEED = MOVE_SPEED*0.7
 		Settings.Difficulties.MEDIUM:
-			pass
+			MOVE_SPEED = MOVE_SPEED*0.8
 		Settings.Difficulties.HARD:
-			MOVE_SPEED = MOVE_SPEED*1.2
+			MOVE_SPEED = MOVE_SPEED*1.0
 	if !launched:
 		global_position.y = -0.123
 		return
