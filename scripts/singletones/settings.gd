@@ -8,11 +8,13 @@ enum Difficulties {EASY, MEDIUM, HARD}
 var volume : float = 0.0
 var camera_shake : bool = true
 var difficulty : Difficulties = Difficulties.MEDIUM
+var sensitivity : float = 1.0
 
 func _ready() -> void:
 	volume = get_setting("volume", 0.0)
 	camera_shake = get_setting("camera_shake", true)
 	difficulty = get_setting("difficulty", Difficulties.MEDIUM)
+	sensitivity = get_setting("sensitivity", 1.0)
 	AudioServer.set_bus_volume_db(0, volume)
 
 func store_setting(key, value):

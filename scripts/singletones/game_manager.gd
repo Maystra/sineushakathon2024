@@ -18,6 +18,7 @@ var level := 1
 
 var input_active := false
 var game_started := false
+var menu_opened := false
 
 var ui : CanvasLayer
 var caret: Node3D
@@ -38,6 +39,7 @@ func reset():
 	points = 0
 	input_active = true
 	game_started = true
+	menu_opened = false
 	caret.reset()
 	ball.reset_bonus()
 	ui.reset_lives()

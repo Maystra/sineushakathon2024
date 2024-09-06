@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
-const MOVE_SPEED = 125
+const MOVE_SPEED = 300
 const ACCELERATION_SPEED = 10
-const DECELERATION_SPEED = 5
+const DECELERATION_SPEED = 10
+
+var last_mouse_x : float = 0.0
 
 var speed := 0.0
 
@@ -13,32 +15,29 @@ var in_end := false
 var move_vector := Vector3.ZERO
 
 func _input(event: InputEvent) -> void:
-	if !GameManager.input_active:
+	if !GameManager.input_active or GameManager.menu_opened:
 		move_vector.x = 0
 		return
 	if Input.is_action_just_pressed("Launch") and !ball.launched:
 		ball.launch(Vector3(0.02, 1.0, 0.0))
 	if GameManager.TESTING and Input.is_action_just_pressed("DestroyBricks"):
 		destroy_all_bricks()
-	#if event is InputEventMouseMotion:
-		#print(event.velocity)
-		#if event.velocity.x > 0:
-			#move_vector.x = 1
-		#elif event.velocity.x < 0:
-			#move_vector.x = -1
-		#else:
-			#move_vector.x = 0
+	if event is InputEventMouseMotion and event.screen_relative.x != 0:
+		if event.screen_relative.x > 0:
+			move_vector.x = 1
+		elif event.screen_relative.x < 0:
+			move_vector.x = -1
+		last_mouse_x = event.screen_relative.x
+	#if Input.is_action_pressed("MoveLeft"):
+		#move_vector.x = -1
+	#elif Input.is_action_pressed("MoveRight"):
+		#move_vector.x = 1
 	#else:
-	if Input.is_action_pressed("MoveLeft"):
-		move_vector.x = -1
-	elif Input.is_action_pressed("MoveRight"):
-		move_vector.x = 1
-	else:
-		move_vector.x = 0
+		#move_vector.x = 0
 
 func _physics_process(delta: float) -> void:
 	if move_vector != Vector3.ZERO:
-		speed = min(speed + ACCELERATION_SPEED, MOVE_SPEED)
+		speed = abs(last_mouse_x*7.5*Settings.sensitivity) # min(abs(last_mouse_x*15*Settings.sensitivity), MOVE_SPEED) # min(speed + max(abs(last_mouse_x) / 5, 2), MOVE_SPEED)
 	else:
 		speed = max(speed - DECELERATION_SPEED, 0)
 	velocity = lerp(velocity, move_vector * speed * delta, min(20*delta, 1.0))
@@ -48,7 +47,8 @@ func _physics_process(delta: float) -> void:
 		Settings.Difficulties.MEDIUM:
 			scale.x = 1.0
 		Settings.Difficulties.HARD:
-			scale.x = 1.0
+			scale.x = 0.7
+	move_vector.x = 0
 
 func _process(delta: float) -> void:
 	var collision_result = move_and_slide()

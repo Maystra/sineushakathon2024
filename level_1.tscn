@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c3gj86ukfvdil" path="res://scenes/caret.tscn" id="3_woi1g"]
 [ext_resource type="PackedScene" uid="uid://v6v1d0gd1u6n" path="res://scenes/ball.tscn" id="5_d26eq"]
 [ext_resource type="Script" path="res://scripts/death_zone.gd" id="7_vjoat"]
-[ext_resource type="Texture2D" uid="uid://p845xq58i2qq" path="res://textures/interface/tutorial_launch.png" id="9_ihgtj"]
-[ext_resource type="Texture2D" uid="uid://d63ordtygl8m" path="res://textures/interface/tutorial_move.png" id="10_7mbpd"]
+[ext_resource type="Texture2D" uid="uid://c482udtpq63b4" path="res://textures/interface/tutorial_launch2.png" id="8_e4apx"]
+[ext_resource type="Texture2D" uid="uid://6xf7ym3gl4yd" path="res://textures/interface/tutorial_move_mouse.png" id="9_7gr7n"]
 [ext_resource type="AudioStream" uid="uid://8vxhh41y0pgu" path="res://sounds/ambience.wav" id="12_wf6ya"]
 [ext_resource type="Script" path="res://scripts/blinking_light.gd" id="13_thrr4"]
 [ext_resource type="AudioStream" uid="uid://c63w8ljglatrl" path="res://sounds/drone2.wav" id="13_ysljm"]
@@ -92,14 +92,14 @@ shape = SubResource("BoxShape3D_hw1ny")
 [node name="LaunchTutorial" type="Decal" parent="."]
 transform = Transform3D(0.993793, -1.32656e-09, 0.111243, 0.111243, 1.18509e-08, -0.993793, 0, 1, 1.19249e-08, -0.58766, 0.606269, -0.117945)
 size = Vector3(0.525391, 0.1, 0.162305)
-texture_albedo = ExtResource("9_ihgtj")
+texture_albedo = ExtResource("8_e4apx")
 modulate = Color(0.741238, 0.739742, 0.712839, 1)
 albedo_mix = 0.6
 
 [node name="MoveTutorial" type="Decal" parent="."]
 transform = Transform3D(0.993963, 1.30836e-09, -0.109717, -0.109717, 1.18529e-08, -0.993963, 0, 1, 1.19249e-08, 0.569412, 0.624266, -0.0992806)
 size = Vector3(0.525391, 0.1, 0.162305)
-texture_albedo = ExtResource("10_7mbpd")
+texture_albedo = ExtResource("9_7gr7n")
 modulate = Color(0.836667, 0.840341, 0.834867, 1)
 albedo_mix = 0.6
 
