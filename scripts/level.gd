@@ -41,3 +41,8 @@ func change_layout(new_layout_scene = null):
 	if new_layout_scene:
 		var new_layout = new_layout_scene.instantiate()
 		$CurrentLayout.add_child(new_layout)
+
+func _physics_process(delta: float) -> void:
+	$SpotLight3D.light_energy = 3.0*Settings.brightness
+	$SpotLight3D.spot_angle = 25*max(Settings.brightness, 1.0)
+	

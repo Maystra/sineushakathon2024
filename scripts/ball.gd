@@ -34,8 +34,8 @@ func set_bonus(new_bonus : Bonuses = Bonuses.NONE):
 
 func _process(delta: float) -> void:
 	var is_charged : bool = bonus == Bonuses.CHARGE
-	$OmniLight3D.visible = is_charged
-	$MeshInstance3D["surface_material_override/0"].emission_enabled = is_charged
+	$OmniLight3D.light_energy = int(is_charged)
+	$MeshInstance3D["surface_material_override/0"].emission_energy_multiplier = int(is_charged)*2
 	if bonus == Bonuses.SPEED:
 		MOVE_SPEED = 1.3
 	elif bonus == Bonuses.SLOW:

@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+ParticlesCache="*res://scripts/singletones/particles_cache.gd"
 GameManager="*res://scripts/singletones/game_manager.tscn"
 Settings="*res://scripts/singletones/settings.gd"
 

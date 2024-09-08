@@ -8,6 +8,7 @@
 albedo_texture = ExtResource("1_ss1h0")
 albedo_texture_msdf = true
 orm_texture = ExtResource("3_aemeq")
+emission_enabled = true
 emission = Color(1, 0.483333, 0, 1)
 emission_energy_multiplier = 2.0
 normal_enabled = true

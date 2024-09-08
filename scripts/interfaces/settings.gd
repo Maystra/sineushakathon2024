@@ -2,6 +2,7 @@ extends Control
 
 func _physics_process(delta: float) -> void:
 	$Items/HBoxContainer/SensitivityValue.text = str(Settings.sensitivity)
+	$Items/HBoxContainer2/BrightnessValue.text = str(Settings.brightness)
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
@@ -12,6 +13,8 @@ func _on_visibility_changed() -> void:
 	$Items/DifficultySelector.select(Settings.difficulty)
 	$Items/CameraShakeSelector.select(1-int(Settings.camera_shake))
 	$Items/HBoxContainer/SensitivitySlider.value = snapped(Settings.sensitivity, 0.1)
+	$Items/HBoxContainer2/BrightnessSlider.value = snapped(Settings.brightness, 0.1)
+	
 
 
 func _on_difficulty_selector_item_selected(index: int) -> void:
@@ -34,3 +37,8 @@ func _on_volume_slider_value_changed(value: float) -> void:
 func _on_sensitivity_slider_value_changed(value: float) -> void:
 	Settings.sensitivity = value
 	Settings.store_setting("sensitivity", value)
+
+
+func _on_brightness_slider_value_changed(value: float) -> void:
+	Settings.brightness = value
+	Settings.store_setting("brightness", value)
